@@ -61,3 +61,19 @@ This project consumes TheMealDB
 - Filter by category: filter.php?c=
 - Lookup meal by ID: lookup.php?i=
 - List categories: list.php?c=list
+
+---
+
+## Dependencies
+
+- React 18
+- React Router DOM 6
+- Vite
+- JavaScript (no TypeScript)
+
+---
+
+## Notes
+- Prices are generated randomly on the client side (requirement of the practice).
+- The application handles loading and error states.
+- All routes are SPA and dynamic.
