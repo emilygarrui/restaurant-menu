@@ -18,9 +18,9 @@ It consumes the public API [TheMealDB](https://www.themealdb.com) to fetch meals
 ## Project Structure
 ```
 src/
-├─ main.jsx # App entry point
-├─ App.jsx # Routes
-├─ api/meals.js # API calls and normalization
+├─ main.jsx
+├─ App.jsx
+├─ api/meals.js
 ├─ components/
 │ ├─ NavBar.jsx
 │ ├─ MenuList.jsx
