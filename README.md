@@ -1,42 +1,63 @@
-```md
-# Menú Restaurante - Vite + React
+# Restaurant Menu
+A single-page application (SPA) that displays a restaurant menu using **React** and **Vite**.  
+It consumes the public API [TheMealDB](https://www.themealdb.com) to fetch meals, assigns **random prices**, and allows navigation between categories and meal details.
 
+---
 
-Proyecto de práctica para consumir TheMealDB y mostrar un menú de restaurante.
+## Features
+- List of meals with **name, image, category, and price**.
+- Search meals by name on the home page.
+- View meals by category (dynamic URL `/category/:category`).
+- View meal details (dynamic URL `/meals/:id`) with instructions.
+- Loading and error handling states.
+- Responsive grid layout for cards.
+- Reusable components: `MenuList`, `MenuItem`, `NavBar`.
 
+---
 
-## Instrucciones
+## Project Structure
+```
+src/
+├─ main.jsx # App entry point
+├─ App.jsx # Routes
+├─ api/meals.js # API calls and normalization
+├─ components/
+│ ├─ NavBar.jsx
+│ ├─ MenuList.jsx
+│ └─ MenuItem.jsx
+├─ pages/
+│ ├─ Home.jsx
+│ ├─ Categories.jsx
+│ ├─ CategoryPage.jsx
+│ └─ MealDetail.jsx
+└─ styles.css
+```
+---
 
+## Installation
+1. Clone the repository:
 
-1. Instalar dependencias:
+```bash
+git clone https://github.com/emilygarrui/restaurant-menu.git
+cd menu
+```
 
-
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-
-2. Iniciar en modo desarrollo:
-
-
+3. Run the development server:
 ```bash
 npm run dev
 ```
+Open your browser at http://localhost:5173
 
+## API Used
+This project consumes TheMealDB
+ (no API key required):
 
-3. Abrir en el navegador la URL que muestre Vite (por defecto http://localhost:5173)
-
-
-## Funcionalidades
-- Listado de platos (imagen, nombre, categoría, precio inventado).
-- Búsqueda por nombre en la página principal.
-- Páginas: Inicio, Categorías, Página de categoría (URL dinámica), Detalle de plato (URL dinámica).
-- Estados de carga y error.
-
-
-## API usada
-TheMealDB — https://www.themealdb.com (endpoints usados: `search.php`, `filter.php`, `lookup.php`, `list.php`)
-
-
----
-```
+- Search meals: search.php?s=
+- Filter by category: filter.php?c=
+- Lookup meal by ID: lookup.php?i=
+- List categories: list.php?c=list
